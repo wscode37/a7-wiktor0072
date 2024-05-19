@@ -34,11 +34,13 @@ Screenshots of configured AWS services. Screenshots of your application running.
   - I learned how to deploy app on AWS Fargate and Beanstalk.
   - I learned run docker containers without need of managing servers which simplifies devops operations.
   - I learned how to define tasks and services in ECS.
+  - How to use S3 bucket which can store out data.
 - What obstacles did you overcome?
     Fargate:
     - Exit code 127 while running task. Backend container could not start. The solutions was to copy code from CMD line in Dockerfile and paste it in "command" section in Dockerrun.aws.json file.
     Beanstalk:
     - "Error: solution stack name does not exist" while running terraform file. The solution was to enter the right version of Docker environment.
+    - How to upload application code - I used s3 buckets. 
 - What did you help most in overcoming obstacles?
   - Friends' hints
   - Internet forums
