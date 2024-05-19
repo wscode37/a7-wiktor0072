@@ -1,0 +1,31 @@
+[
+    {
+        "name": "backend",
+        "image": "339713161833.dkr.ecr.us-east-1.amazonaws.com/backend:latest",
+        "command": ["java", "-jar", "/tic-tac-toe.jar"],
+        "portMappings": [
+            {
+            "containerPort": 8080,
+            "protocol": "tcp"
+            }
+    ],
+        "memory": 2048
+    },
+    {
+        "name": "front",
+        "image": "339713161833.dkr.ecr.us-east-1.amazonaws.com/front:latest",
+        "portMappings": [
+        {
+            "containerPort": 3000,
+            "protocol": "tcp"
+        }
+        ],
+        "dependsOn": [
+        {
+        "containerName": "backend",
+        "condition": "START"
+        }
+        ],
+        "memory": 2048
+    }
+]
